@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .fa-solid{
+            position: absolute;
+            top:12px;
+            left:200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label>Name:</label>
+        <input type="text" placeholder="Name" id="peru">  
+        <small style="display: none;color:red" id="nameerror"><i class="fa-solid fa-xmark"></i></small>  
+        <small style="display: none;color:red" id="namevalid">please enter your name</small>  
+    </div>
+    <div>
+        <input type="button" value="SUBMIT" onclick="validateForm()">
+    </div>
+    <script>
+        function validateForm(){
+            let name = document.getElementById("peru").value;
+            console.log(name); 
+            if(name){
+                document.getElementById("nameerror").style.display = "none";
+                if(name.length>=3){
+                        console.log("--------OFFICE--------");
+                        document.getElementById("namevalid").style.display = "none";
+                }else{
+                    console.log("------------HOME----------");
+                    document.getElementById("namevalid").style.display = "block";
+                }
+            }
+            else{
+                document.getElementById("nameerror").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

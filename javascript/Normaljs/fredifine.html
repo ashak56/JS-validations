@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value123</title>
+</head>
+<body>
+    <label>Name</label>
+    <input  type="text" placeholder="name" id="peru">
+    <small style="display:none;color: darkorange;" id="error">please enter your name!</small>
+    <div>
+        <input type="button" value="SUBMIT" onclick="validateForm()">
+    </div>
+    <div id="output"></div>
+    <script>
+        function validateForm(){
+            var name=document.getElementById("peru").value;
+            console.log("-----name------",name);
+            console.log("----namelen------",name.length);
+            if (name.length>=3){
+                console.log("------OFFICE---------");  
+                document.getElementById("output").innerHTML=name;
+                document.getElementById("error").style.display="none"
+            }
+            else{
+                console.log("------HOME------------");
+                document.getElementById("error").style.display="block"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_FORLOOP</title>
+</head>
+<body>
+    <p id="for"></p>
+    <script>
+        let text="";
+        for(let index=5; index<=10; index++){
+            text += "<br> The number is :" +index;
+            console.log(text)
+        }
+        document.getElementById('for').innerHTML=text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Asha Technology:</label>
+        <select id="AT" onchange="validationForm()">
+        <option value="pyhon">Python</option>
+        <option value="webdev">web devalop</option>
+        <option value="ui/ux">ui/ux</option>
+        <option value="sql">SQL</option>
+        <option value="dm">Digital marketing</option>
+        </select>
+        <small style="color: red; display: none;" id="ATerror">this field is requid</small>
+    </div>
+    <script>
+        function validationForm(){
+            let ashatch=document.getElementById("AT").value;
+            console.log(ashatch);
+
+            if(ashatch== "pyhon" || ashatch== "webdev" || ashatch=="ui/ux"){
+                document.getElementById("ATerror").style.display="none";
+                }
+             else{
+                document.getElementById("ATerror").style.display="block";
+             }
+        }
+    </script>
+</body>
+</html>

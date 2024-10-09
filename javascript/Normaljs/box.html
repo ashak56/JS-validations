@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Name:</label>
+        <input type="text" placeholder="Name" id="peru">  
+        <small style="display: none;" id="nameerror">This field is required! </small>  
+    </div>
+    <div>
+        <input type="button" value="SUBMIT" onclick="validateForm()">
+    </div>
+    <script>
+        function validateForm(){
+            let name = document.getElementById("peru").value;
+            console.log(name); 
+            if(name){
+                console.log("----------office----------");
+                document.getElementById("nameerror").style="display:none";
+            }
+            else{
+                console.log("-------------home--------------");
+                document.getElementById("nameerror").style="display:block;color:red";
+            }
+        }
+    </script>
+</body>
+</html>

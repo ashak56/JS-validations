@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Phone No:</label>
+        <input type="number" id="nubr" placeholder="number" onblur="validationForm()">
+        <small style="color: red; display: none;" id="numerror">This field is requid</small>
+    
+    </div>
+    <script>
+      function validationForm(){
+        let phn = document.getElementById("nubr").value;
+        console.log("---PN---",phn);
+        console.log(phn.length);
+
+        if(phn.length==10 || phn.length==12){
+            console.log("--Agree--");
+            document.getElementById("numerror").style.display="none";
+        }
+        else{
+            console.log("--Not agree--");
+            document.getElementById("numerror").style.display="block";  
+        }
+    }
+    </script>
+</body>
+</html>

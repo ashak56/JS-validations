@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Password</label>
+        <input  id="pw" type="password">    
+    </div>
+    <div>
+        <label>Cpassword</label>
+        <input type="text" id="cpw">
+    </div>
+    <small style="display: none; color: red;" id="pwerror">this field is required</small>
+    <input type="button" value="submit" onclick="valdatepassword()">
+    <script>
+        function valdatepassword(){
+            let pwd = document.getElementById("pw").value;
+            console.log(pwd)
+            let cpwd = document.getElementById("cpw").value;
+            console.log(cpwd)
+            if(pwd==cpwd){
+                 document.getElementById("pwerror").style.display="none";
+                 console.log("---ok---")
+            }
+            else{
+                document.getElementById("pwerror").style.display="block";
+                console.log("---notok---")
+        }
+    }
+    </script>
+</body>
+</html>
